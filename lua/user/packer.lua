@@ -76,4 +76,9 @@ return require('packer').startup(function(use)
         -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
     }
 
+    -- bufferline for tabs like experience
+    use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
+
+    use { "akinsho/toggleterm.nvim", tag = '*' }
+
 end)

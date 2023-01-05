@@ -5,11 +5,10 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- Appends line below to current line
--- and keeps cursor at the same place
+-- Appends line below to current line and keeps cursor at the same place
 vim.keymap.set("n", "J", "mzJ`z")
--- Allows half space jumping without
--- changing position of the cusrsoe
+
+-- Allows half space jumping without changing position of the cursor
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
@@ -51,6 +50,9 @@ vim.keymap.set({ "n", "v" }, "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Lef
 
 -- makes current file executable
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+vim.keymap.set("n", "L", vim.cmd.bnext) -- Press L to move to next buffer
+vim.keymap.set("n", "H", vim.cmd.bprevious) -- Press H to move to previous buffer
 
 -- Required to copy from nvim to windows clipboard
 -- the below line is required but commented for now
