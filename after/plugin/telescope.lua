@@ -1,6 +1,6 @@
 local telescope = require('telescope.builtin')
 
--- Bindins from the primagen video
+-- Bindings from the primagen video
 -- vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
 -- vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 -- vim.keymap.set('n', '<leader>ps', function()

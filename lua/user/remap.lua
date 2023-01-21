@@ -58,11 +58,10 @@ vim.keymap.set("n", "H", vim.cmd.bprevious) -- Press H to move to previous buffe
 -- the below line is required but commented for now
 -- vim.opt.clipboard = "unnamedplus"
 if vim.fn.has('wsl') == 1 then
-    vim.api.nvim_create_autocmd('TextYankPost', {
-        group = vim.api.nvim_create_augroup('Yank', { clear = true }),
-        callback = function()
-            vim.fn.system('clip.exe', vim.fn.getreg('"'))
-        end,
-    })
+  vim.api.nvim_create_autocmd('TextYankPost', {
+    group = vim.api.nvim_create_augroup('Yank', { clear = true }),
+    callback = function()
+      vim.fn.system('clip.exe', vim.fn.getreg('"'))
+    end,
+  })
 end
-
