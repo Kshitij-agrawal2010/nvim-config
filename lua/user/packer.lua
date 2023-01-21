@@ -74,6 +74,8 @@ return require('packer').startup(function(use)
     -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
   }
 
+  use("jose-elias-alvarez/null-ls.nvim")
+
   use { "akinsho/toggleterm.nvim", tag = '*' }
 
   -- Themes
